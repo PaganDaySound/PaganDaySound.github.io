@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagan Day Sound</title>
+    <!-- Link to Poppins font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
+
+    <style>
+        body {
+            background: url('/bin/cathedral_1.png') no-repeat;
+            background-color: rgb(5, 3, 3);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Hide overflow for the blur effect */
+            background-attachment: fixed;
+            /* Fixed background */
+            background-size: cover;
+            /* Cover the entire viewport */
+        }
+
+        /* Blur effect with fade-out in the center using radial-gradient */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 80%);
+            z-index: -1;
+            /* Place the blur effect behind the content */
+        }
+
+        header {
+            text-align: left;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* Style the link */
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Style the link on hover */
+        header a:hover {
+            text-decoration: underline;
+            color: rgb(213, 232, 250);
+        }
+
+        .link-separator {
+            color: white;
+        }
+
+        .description {
+            max-width: 600px;
+            margin: 50px 0; /* Adjusted the margin to move it down more */
+            font-size: 18px;
+        }
+
+        .email {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Make the header a link to the index page -->
+        <a href="index.html">
+            <h1>Pagan Day Sound</h1>
+        </a>
+
+        <!-- Description about Pagan Day Sound -->
+        <div class="description">
+            <p>Pagan Day Sound is a sound design studio based in London, specializing in creating audio for film, television, and advertising.</p>
+        </div>
+
+        <!-- Example email -->
+        <div class="email">
+            <p>Contact us: <a href="mailto:pagandaysound@gmail.com">pagandaysound@gmail.com</a></p>
+        </div>
+    </header>
+
+    <!-- Your content goes here -->
+</body>
+
+</html>
