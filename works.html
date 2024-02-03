@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player - Index</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
+    <style>
+        body {
+            background: url('/bin/cathedral_1.png') no-repeat;
+            background-color: rgb(5, 3, 3);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 150px 0 0;
+            /* Adjust top margin to move content down */
+            padding: 20px;
+            /* Hide overflow for the blur effect */
+            background-attachment: fixed;
+            /* Fixed background */
+            background-size: cover;
+            /* Cover the entire viewport */
+            padding-left: 20px;
+            /* Adjust left padding to move content to the right */
+        }
+
+        /* Blur effect with fade-out in the center using radial-gradient */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 80%);
+            z-index: -1;
+            /* Place the blur effect behind the content */
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        audio {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* Customize the appearance of audio player controls */
+        audio::-webkit-media-controls-panel {
+            background-color: #50687c;
+            /* Change to your desired background color */
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-pause-button {
+            color: #ffffff;
+            /* Change to your desired button color */
+        }
+
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #ffffff;
+            /* Change to your desired time display color */
+        }
+
+        audio::-webkit-media-controls-mute-button,
+        audio::-webkit-media-controls-volume-slider {
+            color: #fff;
+            /* Change to your desired volume control color */
+        }
+
+        audio::-webkit-media-controls-volume-slider-container {
+            margin-right: 10px;
+            /* Optional: Add margin to volume control */
+        }
+
+        /* Additional styling for non-WebKit browsers (Firefox) */
+        audio {
+            background-color: #50687c;
+            color: #fff;
+        }
+
+        .index-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .image-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 300px;
+            /* Adjust the width as needed */
+            border-radius: 10px;
+            /* Optional: Add rounded corners */
+            margin-right: 10px;
+            /* Optional: Add margin between image and text */
+        }
+
+        .image-text {
+            margin-top: 10px;
+        }
+
+        /* Style the link on hover */
+        .index-link:hover {
+            text-decoration: underline;
+            color: rgb(213, 232, 250);
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: normal;
+            /* Set to 'normal' for not bold */
+            text-transform: none;
+            /* Add any other desired styles */
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="index-link">
+        <h1>Pagan Day Sound</h1>
+    </a>
+
+    <div>
+        <h2>***</h2>
+        <p>Audio and soundtrack for independent film ...</p>
+        <audio controls>
+            <source src="audio/file1.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="image-container">
+            <img src="path/to/your/image.jpg" alt="Image Description">
+            <p class="image-text">Stills from ...</p>
+        </div>
+    </div>
+
+    <div>
+        <h2>***</h2>
+        <p>Song used in exhibition "Time Undone", London 2023</p>
+        <audio controls>
+            <source src="bin/tram.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div>
+        <h2>***</h2>
+        <p>Michal Georgian Televised Remix</p>
+        <audio controls>
+            <source src="bin/mg.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script>
+        // Get all audio elements
+        const audioElements = document.querySelectorAll('audio');
+
+        // Add event listeners to each audio element
+        audioElements.forEach(audioElement => {
+            audioElement.addEventListener('play', () => {
+                // Pause all other audio elements when one starts playing
+                audioElements.forEach(otherAudio => {
+                    if (otherAudio !== audioElement) {
+                        otherAudio.pause();
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
