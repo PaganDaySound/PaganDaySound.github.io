@@ -16,6 +16,10 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
+            /* Constrain horizontal overflow */
+            /* Allow vertical overflow */
+            overflow-y: auto;
             overflow: hidden;
             /* Hide overflow for the blur effect */
             background-attachment: fixed;
@@ -61,18 +65,6 @@
         .link-separator {
             color: white;
         }
-
-        .description {
-            max-width: 600px;
-            margin: 50px 0;
-            /* Adjusted the margin to move it down more */
-            font-size: 18px;
-        }
-
-        .email {
-            font-size: 16px;
-            margin-top: 10px;
-        }
     </style>
 </head>
 
@@ -83,28 +75,17 @@
             <h1>Pagan Day Sound</h1>
         </a>
 
-        <!-- Description about Pagan Day Sound -->
-        <div class="description">
-            <p>Pagan Day Sound is a sound design studio based in London, specializing in creating audio for film,
-                television, and advertising.</p>
+        <!-- Link to the "Works" page -->
+        <a href="works.html">Works</a>
 
+        <!-- Add a space and a pipe symbol between the links -->
+        <span class="link-separator"> | </span>
 
-            <!-- Example email -->
-            <div class="email">
-                <p>Contact us: <a href="mailto:pagandaysound@gmail.com">pagandaysound@gmail.com</a></p>
-            </div>
-
-            <div class="teeth">
-                <p>*</p>
-                <p><b>Teeth Studios</b></p>
-                <p>Pagan Day Sound works in close collaboration with Teeth Studios, an independent recording studio
-                    based in Norwood Junction. </p>
-                <p>Check out Teeth's Instagram here: <a href="url">https://www.instagram.com/teeth_studios/?hl=en</a>
-                </p>
-            </div>
-
+        <!-- Link to the "About & Contact" page -->
+        <a href="about-contact.html">About & Contact</a>
     </header>
 
+    <!-- Your content goes here -->
 </body>
 
 </html>
